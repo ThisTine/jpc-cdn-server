@@ -10,8 +10,9 @@ FROM --platform=linux/amd64 alpine
 
 WORKDIR /app
 
-COPY --from=builder /app/jpc-file-server .
+COPY ./static ./static
 
+COPY --from=builder /app/jpc-file-server .
 
 EXPOSE 4000
 
